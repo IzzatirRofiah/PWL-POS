@@ -9,14 +9,30 @@ use App\Models\LevelModel;
 
 class UserModel extends Model
 {
+    // use HasFactory;
+
+    // protected $table = 'm_user'; //mendefiniskan nama tabel yang digunakan model
+    // protected $primaryKey = 'user_id'; //mendefiniskan primary key dari tabel digunakan
+
+    // protected $fillable =['level_id', 'username', 'nama', 'password'];
+    // public function level(): BelongsTo 
+    // {
+    //     return $this->belongsTo(LevelModel::class, 'level_id', 'level_id');
+    // }
+
     use HasFactory;
 
-    protected $table = 'm_user'; //mendefiniskan nama tabel yang digunakan model
-    protected $primaryKey = 'user_id'; //mendefiniskan primary key dari tabel digunakan
+    protected $table = 'm_user';
+    protected $primaryKey = 'user_id';
 
-    protected $fillable =['level_id', 'username', 'nama', 'password'];
-    public function level(): BelongsTo 
-    {
-        return $this->belongsTo(LevelModel::class, 'level_id', 'level_id');
-    }
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    // protected $fillable = ['level_id', 'username', 'nama', 'password'];
+
+    // Modif
+    protected $fillable = ['level_id', 'username', 'nama'];
+
 }
