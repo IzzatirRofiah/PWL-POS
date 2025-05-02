@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\LevelController;
+
 
 
 /*
@@ -23,3 +25,6 @@ Route::get('/', function () {
 // JS 02
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/sales', [SalesController::class, 'index'])->name('sales.index');
+
+// JS 03
+Route::get('/level',[LevelController::class,'index']);
