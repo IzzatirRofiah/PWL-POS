@@ -123,14 +123,14 @@
 //     }
 // }
 
-namespace App\Http\Controllers;
+// namespace App\Http\Controllers;
 
-use App\Models\UserModel;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+// use App\Models\UserModel;
+// use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
-{
+// class UserController extends Controller
+// {
     // public function index()
     // {
     //     $user = UserModel::find(1);
@@ -184,10 +184,62 @@ class UserController extends Controller
     //     return view('user', ['data' => $user]);
     // }
 
+    // public function index()
+    // {
+    //     $user = UserModel::where('level_id', 2)->count();
+    //     return view('user', ['data' => $user]);
+    // }
+// }
+
+namespace App\Http\Controllers;
+
+use App\Models\UserModel;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
+class UserController extends Controller
+{
+    // public function index()
+    // {
+    //     $user = UserModel::firstOrCreate(
+    //         [
+    //             'username' => 'manager',
+    //             'nama' => 'Manager',
+    //         ]
+    //     );
+    //     return view('user', ['data' => $user]);
+    // }
+
+    // public function index()
+    // {
+    //     $user = UserModel::firstOrCreate(
+    //         [
+    //             'username' => 'manager22',
+    //             'nama' => 'Manager Dua Dua',
+    //             'password' => Hash::make('12345'), 
+    //             'level_id' => 2
+    //         ]
+    //     );
+
+    //     $data = [$user]; 
+    //     return view('user', ['data' => $data]);
+    // }
+
     public function index()
     {
-        $user = UserModel::where('level_id', 2)->count();
-        return view('user', ['data' => $user]);
+        $user = UserModel::firstOrCreate(
+            [
+                'username' => 'manager33',
+                'nama' => 'Manager Tiga Tiga',
+                'password' => Hash::make('12345'), 
+                'level_id' => 2
+            ]
+        );
+
+        $user->save();
+
+        $data = [$user]; 
+        return view('user', ['data' => $data]);
     }
 
 }
