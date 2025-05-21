@@ -30,6 +30,7 @@ class UserController extends Controller
         return view('user.index', ['breadcrumb' => $breadcrumb, 'page' => $page, 'level' => $level, 'activeMenu' => $activeMenu]);
     }
 
+    // JS06-Prak2
     // Ambil data user dalam bentuk json untuk datatables public function list(Request $request)
     public function list(Request $request)
     {
@@ -166,7 +167,7 @@ class UserController extends Controller
             ->with('level', $level);
     }
 
-    // JS05-prak1
+    // JS06-prak1
     public function store_ajax(Request $request)
     {
         // cek apakah request berupa ajax
@@ -199,6 +200,7 @@ class UserController extends Controller
         redirect('/');
     }
 
+    // JS06-prak2
     public function edit_ajax(string $id)
     {
         $user = UserModel::find($id);
@@ -207,6 +209,7 @@ class UserController extends Controller
         return view('user.edit_ajax', ['user' => $user, 'level' => $level]);
     }
 
+    // JS06-prak2
     public function update_ajax(Request $request, $id)
     {
         if ($request->ajax() || $request->wantsJson()) {
