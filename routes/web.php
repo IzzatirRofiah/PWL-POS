@@ -63,6 +63,7 @@ Route::middleware(['auth'])->group(function () { // artinya semua route di dalam
             // JS06-prak2
             Route::get('/{id}/edit_ajax', [UserController::class, 'edit_ajax']);            // menampilkan halaman form edit user AJax
             Route::put('/{id}/update_ajax', [UserController::class, 'update_ajax']);        // menyimpan perubahan data user Ajax
+            // JS06-prak3
             Route::get('/{id}/delete_ajax', [UserController::class, 'confirm_ajax']);       // untuk tampilkan form confirm delete user Ajax
             Route::delete('/{id}/delete_ajax', [UserController::class, 'delete_ajax']);     // untuk hapus data user Ajax
             Route::get('/import', [UserController::class, 'import']);                       // ajax form upload excel

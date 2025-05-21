@@ -250,6 +250,7 @@ class UserController extends Controller
         return redirect('/');
     }
 
+    // JS06-prak3
     public function confirm_ajax(string $id)
     {
         $user = UserModel::find($id);
@@ -257,6 +258,7 @@ class UserController extends Controller
         return view('user.confirm_ajax', ['user' => $user]);
     }
 
+    // JS06-prak3
     public function delete_ajax(Request $request, $id)
     {
         if ($request->ajax() || $request->wantsJson()) {
