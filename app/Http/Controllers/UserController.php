@@ -166,6 +166,7 @@ class UserController extends Controller
             ->with('level', $level);
     }
 
+    // JS05-prak1
     public function store_ajax(Request $request)
     {
         // cek apakah request berupa ajax
