@@ -9,6 +9,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Foundation\Auth\User as Authenticatable; // implementasi class
 
+// JS07-Prak1
 class UserModel extends Authenticatable implements JWTSubject
 {
     public function getJWTIdentifier()

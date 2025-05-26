@@ -63,6 +63,7 @@ return [
     |
     */
 
+    // JS07-Prak1
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
