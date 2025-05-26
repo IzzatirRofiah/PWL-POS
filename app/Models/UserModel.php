@@ -47,6 +47,7 @@ class UserModel extends Authenticatable implements JWTSubject
         );
     }
 
+    // JS07-Prak3
     //mendapat nama role
     public function getRoleName(): string
     {

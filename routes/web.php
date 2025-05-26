@@ -36,6 +36,8 @@ Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan']);
 Route::get('/user/hapus/{id}', [UserController::class, 'hapus']);
 
 // JS07-Prak1
+// JS07-Prak2
+// JS07-Prak3
 Route::pattern('id', '[0-9]+'); // artinya ketika ada parameter {id}, maka harus berupa angka
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
@@ -74,7 +76,6 @@ Route::middleware(['auth'])->group(function () { // artinya semua route di dalam
         });
     });
 
-    // JS07-Prak2
     Route::group(['prefix' => 'level'], function () {
         Route::middleware(['authorize:ADM,MNG'])->group(function () {
             Route::get('/', [LevelController::class, 'index']);                             // Menampilkan halaman awal level user

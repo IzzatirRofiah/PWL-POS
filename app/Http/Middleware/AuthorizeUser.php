@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AuthorizeUser
 {
+    // JS07-Prak3
     /**
      * Handle an incoming request.
      *
