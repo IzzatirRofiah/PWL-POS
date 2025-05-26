@@ -33,7 +33,7 @@ class UserModel extends Authenticatable implements JWTSubject
 
     protected $casts = ['password' => 'hashed']; // casting password agar otomatis dihashing
 
-
+    // JS07-Prak2
     // relasi ke tabel level
     public function level(): BelongsTo
     {

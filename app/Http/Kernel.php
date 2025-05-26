@@ -52,6 +52,8 @@ class Kernel extends HttpKernel
      *
      * @var array<string, class-string|string>
      */
+    
+    // JS07-Prak2
     protected $middlewareAliases = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'authorize' => \App\Http\Middleware\AuthorizeUser::class, // middleware yang kita buat

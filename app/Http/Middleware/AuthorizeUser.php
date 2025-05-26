@@ -1,5 +1,6 @@
 <?php
 
+// JS07-Prak2
 namespace App\Http\Middleware;
 
 use Closure;

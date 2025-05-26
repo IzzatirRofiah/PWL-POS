@@ -74,6 +74,7 @@ Route::middleware(['auth'])->group(function () { // artinya semua route di dalam
         });
     });
 
+    // JS07-Prak2
     Route::group(['prefix' => 'level'], function () {
         Route::middleware(['authorize:ADM,MNG'])->group(function () {
             Route::get('/', [LevelController::class, 'index']);                             // Menampilkan halaman awal level user
